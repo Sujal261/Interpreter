@@ -30,6 +30,9 @@ void run(string& source){
     {
         cout<<token.toString()<<endl;
     }
+    if(had_error){
+        exit(65);
+    }
 
 }
 
@@ -50,6 +53,7 @@ void runPrompt(){
         break;
        } 
        run(line);
+       had_error = false;
     }
 }
 
